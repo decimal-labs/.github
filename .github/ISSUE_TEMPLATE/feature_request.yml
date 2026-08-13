@@ -1,0 +1,39 @@
+name: Feature request
+description: Something you want that isn't there.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For the specification repositories (`agentversion`, `skillevaluation`), a change to the
+        spec itself usually wants an ADR rather than a feature request — see that repository's
+        `CONTRIBUTING.md`. This form is the right place to start the conversation either way.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: >
+        Describe the problem rather than the solution. The most useful feature requests explain
+        the situation that made you want the feature — that often turns out to be solvable a
+        different way.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you have in mind
+      description: If you already have a shape in mind, sketch it. Rough is fine.
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you're doing instead today
+      description: >
+        Knowing the workaround tells us how much this actually hurts, which is most of how we
+        prioritise.
+    validations:
+      required: false

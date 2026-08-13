@@ -1,0 +1,62 @@
+name: Bug report
+description: Something behaves differently than documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing. If this is a **security** issue, please close this tab and use
+        [private vulnerability reporting](https://github.com/decimal-labs/.github/blob/main/SECURITY.md)
+        instead — a public issue is the one place a vulnerability should not go.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, and what you got instead of what you expected.
+      placeholder: |
+        I called decimalai.flush() after run_agent() and the buffer was still full.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Smallest thing that reproduces it
+      description: >
+        Code, a command, or a sequence of steps. Trim it down as far as you reasonably can —
+        a ten-line reproduction is worth far more than a link to a repository.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version, if this is a versioned thing
+      description: >
+        Skip this if it does not apply — a docs page or a notebook has no version. For the Python
+        packages, `pip show <package>`. For the GitHub Action, the ref you pinned. For the API,
+        roughly when you made the call.
+      placeholder: "decimalai 0.10.0, Python 3.12, macOS"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Errors or logs
+      description: >
+        Paste any traceback or error output. **Redact API keys and anything identifying** before
+        you post — this issue is public.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Workarounds you found, related issues, or a guess at the cause.
+    validations:
+      required: false

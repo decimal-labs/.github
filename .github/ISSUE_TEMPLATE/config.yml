@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/decimal-labs/.github/blob/main/SECURITY.md
+    about: Please report privately, not as a public issue. Two channels, either is fine.
+  - name: Documentation
+    url: https://docs.decimal.ai
+    about: Guides, concepts, and the API reference.
+  - name: Question or anything else
+    url: mailto:hello@decimal.ai
+    about: If it isn't a bug or a feature request, email us — we read everything.

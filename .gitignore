@@ -1,0 +1,36 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Agent and tool state — never belongs in a public tree
+.claude/
+.agents/
+.decimal/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.p12
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.deepeval/
+
+# JavaScript
+node_modules/
+
+# Build output
+dist/
+build/
