@@ -32,8 +32,11 @@ we cannot hold to:
 - We follow [coordinated disclosure](https://en.wikipedia.org/wiki/Coordinated_vulnerability_disclosure).
   We will agree a disclosure timeline with you rather than impose one, and we will not ask you to
   stay quiet indefinitely.
-- We are happy to credit you in the advisory and the release notes. Tell us how you would like to
-  be named, or say that you would rather not be.
+- We do not publish standalone security advisories. A fix ships in an ordinary release, and its
+  release notes are the public record — so please do not wait on an advisory before writing up your
+  own account.
+- We are happy to credit you in those release notes. Tell us how you would like to be named, or say
+  that you would rather not be.
 
 We do not currently run a paid bug bounty. That is a resourcing decision, not a judgment about the
 value of your work.
