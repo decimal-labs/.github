@@ -11,8 +11,6 @@
 | Read the A/B benchmarking spec | [skillevaluation](https://github.com/decimal-labs/skillevaluation) |
 | Gate pull requests against agent regressions in CI | [regression-check](https://github.com/decimal-labs/regression-check) |
 | Point an MCP client at the skills registry | [decimalai-mcp](https://github.com/decimal-labs/decimalai-mcp) |
-| Run the evaluation notebooks | [eval-notebooks](https://github.com/decimal-labs/eval-notebooks) |
-| Fix or improve the documentation | [decimalai-docs](https://github.com/decimal-labs/decimalai-docs) |
 
 The fastest way to see any of it work is the regression demo — about two minutes; the only setup is a free API key:
 
@@ -27,7 +25,7 @@ It diffs an agent's manifest against recorded traffic and shows exactly what a c
 Most skill directories rank by stars. We benchmark. Every public skill is security-scanned
 before it is published. A skill that has been A/B benchmarked against a no-skill baseline on
 real tasks carries whatever that measured — including when the lift is zero or negative — and
-is re-verified as models improve. A skill that has not been benchmarked is listed with no lift
+is re-benchmarked whenever the skill changes. A skill that has not been benchmarked is listed with no lift
 number rather than an invented one. What comes out is a number you can argue with, and the
 evidence behind it.
 
@@ -49,16 +47,9 @@ can prove it agrees with ours rather than taking our word for it.
 
 | | |
 |---|---|
-| **[decimalai-python](https://github.com/decimal-labs/decimalai-python)** | The Python SDK. Trace agents, manage datasets, run evaluations, and route registry skills into your agent's context at runtime. Integrations for LangChain, LangGraph, OpenAI, Anthropic, AutoGen, ADK and the Claude Agent SDK. `MIT` · [PyPI](https://pypi.org/project/decimalai/) |
+| **[decimalai-python](https://github.com/decimal-labs/decimalai-python)** | The Python SDK. Trace agents, manage datasets, run evaluations, and route registry skills into your agent's context at runtime. Integrations for LangChain, LangGraph, LlamaIndex, CrewAI, the OpenAI Agents SDK, Google ADK and the Claude Agent SDK, plus direct provider calls and any OpenTelemetry source. `MIT` · [PyPI](https://pypi.org/project/decimalai/) |
 | **[regression-check](https://github.com/decimal-labs/regression-check)** | A GitHub Action that catches agent regressions before they ship — it diffs your agent's manifest against recorded production traffic on every pull request, so there are no eval cases to write. `MIT` |
 | **[decimalai-mcp](https://github.com/decimal-labs/decimalai-mcp)** | An MCP server for the skills registry. Search skills, inspect a skill's safety-scan status and any benchmark evidence it carries, read the leaderboard. Read-only, no API key required. `MIT` · [PyPI](https://pypi.org/project/decimalai-mcp/) |
-
-### Learning
-
-| | |
-|---|---|
-| **[eval-notebooks](https://github.com/decimal-labs/eval-notebooks)** | Eight notebooks on evaluating agents: metrics, experiment tracking, curating training data from production traces, regression gates, prompt comparison, and multi-agent evals. Framework-agnostic. `MIT` |
-| **[decimalai-docs](https://github.com/decimal-labs/decimalai-docs)** | Source for [docs.decimal.ai](https://docs.decimal.ai). Corrections welcome — the edit link on every page lands here. `CC-BY-4.0` |
 
 ---
 
