@@ -1,26 +1,35 @@
 # DecimalAI
 
-**Catch agent regressions before they ship, and measure agent skills with an open A/B spec — instead of trusting a download count.**
+**A registry of agent skills with test results. See what a skill changes, then add it to the agent you already have.**
 
 ### Which repo do you want?
 
 | You want to… | Go to |
 |---|---|
-| Trace your agent, catch regressions, measure your skills | [decimalai-python](https://github.com/decimal-labs/decimalai-python) |
+| Find a skill and add it to your agent | [decimalai-python](https://github.com/decimal-labs/decimalai-python) |
+| Browse skills and their test results | [the registry](https://app.decimal.ai/skills) |
 | Read the agent-versioning spec | [agentversion](https://github.com/decimal-labs/agentversion) |
 | Read the A/B benchmarking spec | [skillevaluation](https://github.com/decimal-labs/skillevaluation) |
 | Gate pull requests against agent regressions in CI | [regression-check](https://github.com/decimal-labs/regression-check) |
 | Point an MCP client at the skills registry | [decimalai-mcp](https://github.com/decimal-labs/decimalai-mcp) |
 
-The fastest way to see any of it work is the regression demo — about two minutes; the only setup is a free API key:
+The fastest way to see it work takes about a minute and needs no account:
 
 ```bash
 pip install decimalai
+decimalai skills add playwright-cli
+```
+
+Without this skill, a model guesses a browser CLI's commands. With it, it passed 23 of 23 test cases, against 7 of 23 without. [The Quickstart](https://docs.decimal.ai/quickstart) runs it in your framework.
+
+To see what your next agent change would break, there is a regression demo. It takes about two minutes and needs a free API key:
+
+```bash
 export DECIMAL_API_KEY="dai_sk_..."   # free key from app.decimal.ai/settings
 decimalai demo regression
 ```
 
-It diffs an agent's manifest against recorded traffic and shows exactly what a change would break. The demo runs on a seeded reference agent, so its numbers are illustrative — run it yourself.
+The demo runs on a seeded reference agent, so its numbers are illustrative — run it yourself.
 
 Most skill directories rank by stars. We benchmark. Every public skill is security-scanned
 before it is published. A skill that has been A/B benchmarked against a no-skill baseline on
